@@ -23,7 +23,18 @@ machines, all machines must have run LogViewer.
 
 [Demo video](https://www.youtube.com/watch?v=OE7nAiNX07Q)
 
-### Quick start
+### Quick start (with docker)
+Build docker image:
+```sh
+$ docker build -t log-viewer-java .
+```
+
+Run image, use your logs folder:
+```sh
+$ docker run --rm -it -v $(pwd)/demo_python/logs:/root/logs -v $(pwd)/config:/opt/app/config -p 8111:8111 log-viewer-java:latest
+```
+
+### Quick start (without docker)
 
 - Download LogViewer from [Github releases](https://github.com/sevdokimov/log-viewer/releases) and unpack it to any folder.
   Make sure the machine has installed Java 8 or later.

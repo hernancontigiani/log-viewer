@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8111:8111"
+    volumes:
+      - type: bind
+        source: ./config
+        target: /opt/app/config
+        # Cambiar "source" con su ubicación de los logs (usar ruta abosulta)
+      - type: bind
+        source: ./demo_python/logs
+        target: /root/logs
+      
