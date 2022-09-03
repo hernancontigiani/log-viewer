@@ -34,6 +34,11 @@ Run image, use your logs folder:
 $ docker run --rm -it -v $(pwd)/demo_python/logs:/root/logs -v $(pwd)/config:/opt/app/config -p 8111:8111 log-viewer-java:latest
 ```
 
+Run image with docker-compose:
+```sh
+$ docker-compose up
+```
+
 ### Quick start (without docker)
 
 - Download LogViewer from [Github releases](https://github.com/sevdokimov/log-viewer/releases) and unpack it to any folder.
